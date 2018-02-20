@@ -1,0 +1,14 @@
+<div>
+  <h1>All tasks</h1>
+
+  <% @tasks.each do |task| %>
+  <h3> <%= link_to task.title, task_path(task) %> Completed: <%= task.completed %> </h3>
+  <%= link_to "Delete task", task_delete_path(task), method: :delete %>
+  <%= link_to 'Edit task', task_edit_path(task.id)  %>
+
+  <% end %>
+</div>
+
+<div class="aa">
+  <%= link_to "create new task", new_task_path %>
+</div>

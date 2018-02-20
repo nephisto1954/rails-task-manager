@@ -1,0 +1,17 @@
+<div class="form">
+  <%= form_for(task) do |t| %>
+
+      <%= t.label :title %>
+      <input type="text" name="task[title]" id="task_title" class="form-control">
+
+      <%= t.label :details %>
+      <input type="text" name="task[details]" id="task_details" class="form-control">
+
+      <%= t.label :completed %>
+      <%= t.check_box :completed %>
+
+      <%= t.submit %>
+  <% end %>
+</div>
+
+
